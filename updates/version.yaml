@@ -1,0 +1,13 @@
+1.0.1: First version of Pilots
+1.0.2:
+    - 'Created table pensoft_pilots_pilots'
+    - create_pilots_table.php
+1.0.3:
+    - 'Created table pensoft_pilot_contact_pivot'
+    - create_pilot_contact_pivot_table.php
+1.0.4:
+    - 'Updated table pensoft_pilots_pilots'
+    - update_pilots_table.php
+
+4.0.1:
+    - 'Migrated to OctoberCMS 4 and PHP 8.2'

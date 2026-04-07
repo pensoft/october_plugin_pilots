@@ -1,0 +1,45 @@
+<?php namespace Pensoft\Pilots\Controllers;
+
+use BackendMenu;
+use Backend\Classes\Controller;
+use Backend\Behaviors\FormController;
+use Backend\Behaviors\ListController;
+use Backend\Behaviors\ReorderController;
+
+/**
+ * Pilots Backend Controller
+ */
+class Pilots extends Controller
+{
+    public $implement = [
+        FormController::class,
+        ListController::class,
+        ReorderController::class,
+    ];
+
+    /**
+     * @var string formConfig file
+     */
+    public string $formConfig = 'config_form.yaml';
+
+    /**
+     * @var string listConfig file
+     */
+    public string $listConfig = 'config_list.yaml';
+
+    /**
+     * @var string reorderConfig file
+     */
+    public string $reorderConfig = 'config_reorder.yaml';
+
+
+    /**
+     * __construct the controller
+     */
+    public function __construct()
+    {
+        parent::__construct();
+
+        BackendMenu::setContext('Pensoft.Pilots', 'pilots', 'pilots');
+    }
+}

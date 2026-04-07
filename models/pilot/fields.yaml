@@ -1,0 +1,66 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    title:
+        label: Pilot Title
+        type: text
+        commentAbove: 'Full Project Title (Header)'
+        span: auto
+    pilot_number:
+        label: Pilot Title
+        type: text
+        commentAbove: 'Add pilot number (Number)'
+        span: auto
+    published:
+        label: Published
+        type: switch
+        span: auto
+        commentAbove: 'Toggle to show or hide on website'
+        tab: About    
+    intro:
+        label: Intro Text
+        type: richeditor
+        commentAbove: 'Short intro text'
+        span: full
+    name:
+        label: Pilot Name
+        type: text
+        commentAbove: 'Pilot Name'
+        span: auto
+    stakeholders:
+        label: Stakeholders
+        type: richeditor
+        commentAbove: 'List all stakeholders'
+        span: full
+    timeline_start:
+        label: 'Timeline Start'
+        mode: date
+        type: datepicker
+        span: left
+        commentAbove: 'Start timline date'
+    timeline_end:
+        label: 'Timeline End'
+        mode: date
+        type: datepicker
+        span: right
+        commentAbove: 'End timline date'
+    objectives:
+        label: Objectives
+        type: richeditor
+        commentAbove: 'Pilot objectives'
+        span: full
+    link_to_news:
+        label: News URL
+        type: text
+        commentAbove: 'Link to the article'
+        span: auto
+    contacts:
+        label: Contacts
+        type: relation
+        nameFrom: name
+        descriptionFrom: email
+        span: auto
+        select: concat(names, ' (', email, ')')
+        pivot: [pilot_id, contact_id]

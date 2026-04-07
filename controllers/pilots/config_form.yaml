@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Pilot
+
+# Model Form Field configuration
+form: $/pensoft/pilots/models/pilot/fields.yaml
+
+# Model Class name
+modelClass: Pensoft\Pilots\Models\Pilot
+
+# Default redirect location
+defaultRedirect: pensoft/pilots/pilots
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: pensoft/pilots/pilots/update/:id
+    redirectClose: pensoft/pilots/pilots
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: pensoft/pilots/pilots
+    redirectClose: pensoft/pilots/pilots
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title
